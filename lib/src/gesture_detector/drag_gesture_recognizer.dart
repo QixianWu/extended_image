@@ -13,6 +13,9 @@ mixin DragGestureRecognizerMixin on _DragGestureRecognizer {
     if (_velocityTrackers.keys.length == 1) {
       return true;
     }
+    if(_velocityTrackers.keys.length >=2){
+      return false;
+    }
 
     // if pointers are not the only, check whether they are in the negative
     // maybe this is a Horizontal/Vertical zoom
